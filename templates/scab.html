@@ -1,0 +1,124 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Leaf Disease Detector</title>
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+</head>
+
+
+
+<style>
+    body {
+        background-image: linear-gradient(rgb(0, 170, 170), rgb(9, 87, 87));
+    }
+
+    h2 {
+        color: white;
+    }
+
+    h3#result {
+        color: #fff;
+    }
+
+    .container {
+        font-size: 20px;
+        color: white;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    /* set the size and position of button on web */
+    .button {
+        padding: 10px 30px;
+        font-size: 15px;
+    }
+
+    /* provide css to background of list items */
+    #list-items {
+        display: none;
+        position: absolute;
+        min-width: 134px;
+    }
+
+    /* provide css to list items */
+    #list-items a {
+        display: block;
+        font-size: 17px;
+        background-color: #343a40;
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+
+    }
+</style>
+
+<script>
+    //show and hide dropdown list item on button click
+    function show_hide() {
+        var click = document.getElementById("list-items");
+        if (click.style.display === "none") {
+            click.style.display = "block";
+        } else {
+            click.style.display = "none";
+        }
+    }
+</script>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Apple Scab</a>
+            <div class="dropdown">
+                <button onclick="show_hide()" class="button">Contact us</button>
+                <center>
+                    <!-- dropdown list items will show when we click the drop button -->
+                    <div id="list-items">
+                        <a href="mailto:rahul.sd@somaiya.edu"> rahul.sd@somaiya.edu </a>
+                        <a href="mailto:smit10@somaiya.edu"> smit10@somaiya.edu </a>
+                        <a href="mailto:vipul.m@somaiya.edu"> vipul.m@somaiya.edu </a>
+                    </div>
+                </center>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div id="content" style="margin-top:2em">
+            <ul>
+                <li><b><u>Apple Trees Affected:</u></b> McIntosh, Cortland, and Macoun are susceptible to apple scab. There are many resistant cultivars.</li><br>
+
+                <li><b><u>Symptoms:</u></b> Brown or olive green spots develop on apple tree leaves, which may then curl and fall off. On the apple, dark green
+                spots appear on its surface, later to become darker, flaky, and even cracked. Infected fruit will usually drop, and
+                infections may limit flower formation.</li><br>
+
+                <li><b><u>Causes:</u></b> Spores release from infected apple leaves that have remained on the ground through winter. These spores then infect
+                nearby apple trees. Apple scab can also spread from nearby trees that are already infected. Frequent rains and prolonged
+                leaf wetness enable severe scab infection conditions.</li><br>
+
+                <li><b><u>Treatment:</u></b> Rake up leaves and remove them from the orchard before May. Remove abandoned apple trees within 100 yards of your
+                orchard. The University of Maine Cooperative Extension recommends applying preventive sprays such as captan, sulfur, or
+                other fungicides.</li><br>
+
+                <li><b><u>Season:</u></b> According to the UMaine Cooperative Extension, infections can occur as soon as early May when green tissue emerges from
+                the bud. The disease continues to spread all season with each rainfall.</li>
+                    <br>
+
+                <li><b><u>Risk:</u></b> Apple scab rarely kills trees. Severe cases may cause complete defoliation by early summer. Repeated infections will
+                weaken the tree, making it susceptible to other diseases.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+
+</html>

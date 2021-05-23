@@ -1,0 +1,133 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Leaf Disease Detector</title>
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+</head>
+
+
+
+<style>
+    body {
+        background-image: linear-gradient(rgb(0, 170, 170), rgb(9, 87, 87));
+    }
+
+    h2 {
+        color: white;
+    }
+
+    h3#result {
+        color: #fff;
+    }
+
+    .container{
+        font-size: 20px;
+        color: white;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    /* set the size and position of button on web */
+    .button {
+        padding: 10px 30px;
+        font-size: 15px;
+    }
+
+    /* provide css to background of list items */
+    #list-items {
+        display: none;
+        position: absolute;
+        min-width: 134px;
+    }
+
+    /* provide css to list items */
+    #list-items a {
+        display: block;
+        font-size: 17px;
+        background-color: #343a40;
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+
+    }
+</style>
+
+<script>
+    //show and hide dropdown list item on button click
+    function show_hide() {
+        var click = document.getElementById("list-items");
+        if (click.style.display === "none") {
+            click.style.display = "block";
+        } else {
+            click.style.display = "none";
+        }
+    }
+</script>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Apple Black Rot</a>
+            <div class="dropdown">
+                <button onclick="show_hide()" class="button">Contact us</button>
+                <center>
+                    <!-- dropdown list items will show when we click the drop button -->
+                    <div id="list-items">
+                        <a href="mailto:rahul.sd@somaiya.edu"> rahul.sd@somaiya.edu </a>
+                        <a href="mailto:smit10@somaiya.edu"> smit10@somaiya.edu </a>
+                        <a href="mailto:vipul.m@somaiya.edu"> vipul.m@somaiya.edu </a>
+                    </div>
+                </center>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div id="content" style="margin-top:2em">
+        <ul>
+            <li><b><u>Apple Trees Affected:</u></b> Empire and Cortland are more susceptible than other cultivars. Apple cultivars do not have a
+            significant variation in their susceptibility.</li><br>
+        
+            <li><b><u>Symptoms:</u></b> Black rot causes frogeye leaf spots, fruit rot, and cankers on branches. Infected leaves form spots
+            thought to
+            look like frog eyes with reddish edges and tan middles. Large, brown, rotten spots develop on the apple, most
+            commonly
+            on the blossom end. Although the surface of the apple is brown, the flesh of the apple remains firm. Fruits shrivel
+            up
+            and dry out while remaining attached to the tree.</li><br>
+        
+            <li><b><u>Causes:</u></b> The fungus can affect trunks, leaves, branches, and fruits. Pycnidia, spore-producing structures, develop on
+            infected fruit. Pycnidia appear as small, black spots. When the weather is wet, the rainfall and wind carry the
+            spores
+            to other susceptible areas. The fungus infects leaves, wood, and fruit through openings or wounds. Trees are most
+            vulnerable to black rot when infected with fire blight.</li><br>
+        
+            <li><b><u>Treatment:</u></b> Remove dead or diseased branches and dried fruits. Burn or bury all infected plant materials. If you cut
+            down
+            any tree, remove the stump to ensure the spores do not spread. Fungicides are typically not used to manage black
+            rot.
+            Use captan and sulfur products labeled for black rot control only if needed. Perform preventive measures for fire
+            blight
+            to ensure your trees do not become more susceptible to black rot.</li><br>
+        
+            <li><b><u>Risk:</u></b> According to the University of Minnesota Extension, leaf spots do not have a severe effect on your tree’s
+            health
+            unless many leaves turn yellow and fall off.</li>
+        </ul>
+    </div>
+    </div>
+</body>
+
+
+</html>
+
+
