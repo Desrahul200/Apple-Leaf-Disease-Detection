@@ -1,1 +1,1 @@
-Leaf Disease Detection using CNN
+Apple Leaf Disease Detection using CNN
